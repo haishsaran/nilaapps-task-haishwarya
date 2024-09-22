@@ -1,0 +1,108 @@
+<div class="layout">
+    <mat-card class="card1">
+        <p style="margin:10px">Program outcomes</p>
+        <div [ngClass]="item.toggle?'active-container':'inactive-container'"      *ngFor="let item of data">
+        <div  (click)="item.toggle = !item.toggle">
+            <div class="content1">
+            <span  class="border1">{{item.id}}</span>
+            <span style="color:#A3A9B3;font-size: 14px;margin: 3px 0px;">Evaluation : </span><span style="margin: 4px 0px;font-size: 13px;">5 out of 12</span>
+            <span style="margin-left: auto;">
+                
+          <mat-icon *ngIf="!item.toggle">expand_more</mat-icon>
+          <mat-icon *ngIf="item.toggle">expand_less</mat-icon>
+        </span>
+    </div>
+    
+    <p style="font-weight: 500;font-size: 16px;">{{item.heading}}</p>
+    <div style="display: flex;"><progress id="file" value="80" max="100"> 80% </progress> <p style="margin: 5px;">80%</p></div>
+        </div>
+    
+        <div [hidden]="!item.toggle" style="margin: 2px 0px;">
+            <h6 class="heading">Description</h6>
+            <p class="content">{{item.description}}</p>
+            <p style="
+                font-size: 14px;font-weight: 600; ">PEOs Mapped</p>
+            <p style="font-size: 14px;">PEO 5</p>
+        </div>
+    </div>
+    
+    </mat-card>
+    
+    <div  style="width: 100%;height: 100%;">
+    
+    <div class="box">
+       <div style="display: flex;gap: 5px;">
+        <div style="border: 1px solid #AEE5FC;padding: 3px;"><mat-icon style="vertical-align: bottom;">chevron_left</mat-icon></div>
+        <p style="font-weight: 600;font-size: 16px;margin: 5px 2px;">Course Evaluation Report</p>
+    </div>
+        <p style="text-decoration: underline;font-weight:bold;color:#2E6995">OBE Evaluation Report</p>
+    </div>
+    <div class="card2">
+    <div>
+    <div class="container2">
+    
+    <div *ngFor="let item of data2">
+    <p style="font-weight: 600;font-size: 16px;">{{item.heading}}</p>
+    <p style="font-size: 14px;">{{item.name}}</p>
+    <hr style="color:#F5F5F7">
+    </div>
+    
+    <p style="font-weight: 600;font-size: 16px;">Credits  (4)</p>
+    <div *ngFor="let item of data3" style="display: flex;">
+        <p style="font-size: 13px;">{{ item.subject }}</p>
+        <p style="font-size: 16px;font-weight: 500;"> &nbsp;- {{ item.rank }}</p>
+        </div>
+        <hr style="color:#F5F5F7">
+    
+    
+        <p style="font-weight: 600;font-size: 16px;">Course Outcomes (COs)</p>
+        <div class="container4">
+        <div   *ngFor="let item of data4">
+            {{item}}
+    </div>
+    </div>
+    <hr>
+    
+    <p style="font-weight: 600;font-size: 16px;">Mapped to this Course</p>
+    <div class="container5">
+    <div   *ngFor="let item of data5">
+        {{item}}
+    </div>
+    </div>
+    
+    
+    
+    </div>
+    </div>
+    
+    <div style="margin: 20px 20px;">
+    <div class="box2">
+        <div class="graph-header">
+        <span style="font-size: 14px;margin: 5px 0px;">Total Students</span>
+        <span style="font-weight: bold;font-size: 20px;">102</span>
+    </div>
+    
+    <div class="graph-header">
+        <span style="font-size: 14px;margin: 5px 0px;">Course Average Mark</span>
+        <span style="font-weight: bold;font-size: 20px;">85%</span>
+    </div>
+    
+    </div>
+    
+    <!-- Graph -->
+     <div>
+     <p style="margin:15px ;font-weight: bold;">Assessment Progress</p>
+     <div style="display: flex; flex-direction: column;">
+     <app-bar-chart></app-bar-chart>
+    </div>
+    <div>
+        <p style="margin:15px ;font-weight: bold;">Student's Attendance</p>
+        <app-graph></app-graph>
+     </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    </div>

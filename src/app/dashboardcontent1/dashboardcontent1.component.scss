@@ -1,0 +1,90 @@
+.box{
+    background-color:#F2F2F2;
+    padding: 10px;
+}
+
+::ng-deep.mat-mdc-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-mdc-text-field-wrapper {
+    cursor: pointer;
+    background-color: white !important;
+}
+
+.box1{
+    display: flex;
+    justify-content: space-between
+}
+
+.content{
+    display: flex;
+    width: fit-content;
+    gap: 12px;
+}
+
+a{
+    color:#5383A7
+}
+
+.content > div:not(:last-child) {
+    
+    border: 2px solid #5ECCFA;
+    background-color: white;
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.content2{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px;
+}
+
+mat-icon{
+    vertical-align: top;
+    background-color: white;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.cards{
+    width: 245px;
+    height:100px;
+    padding: 20px;     
+}
+
+.cards  p{
+    margin:0;
+    color:#2C384B;
+}
+.first_card{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        display: grid;
+        place-items: center;
+        border-bottom: 4px solid #2E6995;
+}
+
+mat-card{
+    background-color: white;
+}
+
+@media only screen and (max-width: 800px) {
+    .box > div,.content{
+        display: flex;
+        flex-direction: column;
+    }
+    .content>div:last-child{
+        padding: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 820px) and (max-width: 1200px) {
+    .box1  {
+        display: flex;
+        justify-content: flex-start;
+    }
+    
+  }

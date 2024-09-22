@@ -1,0 +1,40 @@
+<div class="box">
+    <div class="box1">
+        <div class="content">
+            <div><mat-icon>chevron_left</mat-icon>Programs</div>
+            <div><mat-icon>chevron_left</mat-icon>Masters in Business Administration - MBA</div>
+            <div style="margin-top: 8px;"><p style="font-weight: bold;color:#2C384B;margin: 0;">Detailed Overview</p></div>
+        </div>
+        <div>
+            <div>
+                <img width="20" height="20" src="assets/images/group_of_people.png">   
+          <mat-form-field appearance="outline" style="padding-left: 10px;height: fit-content;">
+            <mat-select  [(value)]="selectedDate">
+              <mat-option [value]="selectedDate">{{selectedDate}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content2">
+      <p style="font-size:15px;font-weight: bold;color:#2C384B">Program Educational Objective (PEOs)</p>  
+      <a style="text-decoration: underline;font-weight: bold;">PEOs vs POs</a>
+    </div>
+    
+    <div style="display: flex;gap: 15px;flex-wrap: wrap;">
+      <mat-card  class="first_card">
+    <p style="text-align: center">All</p>
+      </mat-card>
+    
+      <mat-card class="cards"  *ngFor="let data of items">
+        <div style="display: flex;justify-content: space-between;">
+        <div>
+        <p style="font-size: 14px;">{{data.id}}</p>
+        <p style="margin: 10px 0px;">{{data.name}}</p>
+      </div>
+        <div><mat-icon style="color:#2C384B;">description</mat-icon></div>
+      </div>
+          </mat-card>
+    </div>
+    </div>
